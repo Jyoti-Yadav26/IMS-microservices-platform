@@ -1,0 +1,266 @@
+﻿[
+    {
+        "feign_cb":  "true",
+        "run":  1,
+        "warmup_requests_to_open":  7,
+        "cb_state_at_measurement_start":  "CIRCUIT_OPEN",
+        "all_cb_states_at_open":  {
+                                      "inventoryService":  "CIRCUIT_OPEN"
+                                  },
+        "all_cb_states_after":  {
+                                    "inventoryService":  "CIRCUIT_OPEN"
+                                },
+        "skipped_half_open_attempts":  0,
+        "requests_measured":  10,
+        "open_state_latencies_sec":  [
+                                         0.9477,
+                                         0.9368,
+                                         0.9508,
+                                         0.9445,
+                                         0.9289,
+                                         0.962,
+                                         0.941,
+                                         0.9369,
+                                         0.9547,
+                                         0.9388
+                                     ],
+        "order_statuses":  [
+                               "FAILED",
+                               "FAILED",
+                               "FAILED",
+                               "FAILED",
+                               "FAILED",
+                               "FAILED",
+                               "FAILED",
+                               "FAILED",
+                               "FAILED",
+                               "FAILED"
+                           ],
+        "avg_latency_sec":  0.9442,
+        "min_latency_sec":  0.9289,
+        "max_latency_sec":  0.962,
+        "no_fallback_count":  5,
+        "call_not_permitted_count":  31,
+        "unavailable_log_count":  36
+    },
+    {
+        "feign_cb":  "true",
+        "run":  2,
+        "warmup_requests_to_open":  2,
+        "cb_state_at_measurement_start":  "CIRCUIT_OPEN",
+        "all_cb_states_at_open":  {
+                                      "inventoryService":  "CIRCUIT_OPEN"
+                                  },
+        "all_cb_states_after":  {
+                                    "inventoryService":  "CIRCUIT_OPEN"
+                                },
+        "skipped_half_open_attempts":  0,
+        "requests_measured":  10,
+        "open_state_latencies_sec":  [
+                                         0.9547,
+                                         0.9431,
+                                         0.9465,
+                                         0.9354,
+                                         0.9471,
+                                         0.9347,
+                                         0.9507,
+                                         0.9509,
+                                         0.949,
+                                         0.9311
+                                     ],
+        "order_statuses":  [
+                               "FAILED",
+                               "FAILED",
+                               "FAILED",
+                               "FAILED",
+                               "FAILED",
+                               "FAILED",
+                               "FAILED",
+                               "FAILED",
+                               "FAILED",
+                               "FAILED"
+                           ],
+        "avg_latency_sec":  0.9443,
+        "min_latency_sec":  0.9311,
+        "max_latency_sec":  0.9547,
+        "no_fallback_count":  5,
+        "call_not_permitted_count":  31,
+        "unavailable_log_count":  36
+    },
+    {
+        "feign_cb":  "true",
+        "run":  3,
+        "warmup_requests_to_open":  19,
+        "cb_state_at_measurement_start":  "CIRCUIT_OPEN",
+        "all_cb_states_at_open":  {
+                                      "inventoryService":  "CIRCUIT_OPEN"
+                                  },
+        "all_cb_states_after":  {
+                                    "inventoryService":  "CIRCUIT_OPEN"
+                                },
+        "skipped_half_open_attempts":  0,
+        "requests_measured":  10,
+        "open_state_latencies_sec":  [
+                                         0.9309,
+                                         0.9541,
+                                         0.9308,
+                                         0.9494,
+                                         0.9323,
+                                         0.9318,
+                                         0.9534,
+                                         0.9441,
+                                         0.9274,
+                                         0.9276
+                                     ],
+        "order_statuses":  [
+                               "FAILED",
+                               "FAILED",
+                               "FAILED",
+                               "FAILED",
+                               "FAILED",
+                               "FAILED",
+                               "FAILED",
+                               "FAILED",
+                               "FAILED",
+                               "FAILED"
+                           ],
+        "avg_latency_sec":  0.9382,
+        "min_latency_sec":  0.9274,
+        "max_latency_sec":  0.9541,
+        "no_fallback_count":  5,
+        "call_not_permitted_count":  31,
+        "unavailable_log_count":  36
+    },
+    {
+        "feign_cb":  "false",
+        "run":  1,
+        "warmup_requests_to_open":  2,
+        "cb_state_at_measurement_start":  "CIRCUIT_OPEN",
+        "all_cb_states_at_open":  {
+                                      "inventoryService":  "CIRCUIT_OPEN"
+                                  },
+        "all_cb_states_after":  {
+                                    "inventoryService":  "CIRCUIT_OPEN"
+                                },
+        "skipped_half_open_attempts":  0,
+        "requests_measured":  10,
+        "open_state_latencies_sec":  [
+                                         0.9476,
+                                         0.9575,
+                                         0.9551,
+                                         0.9499,
+                                         1.0117,
+                                         0.9404,
+                                         0.9384,
+                                         0.9404,
+                                         0.9519,
+                                         0.9417
+                                     ],
+        "order_statuses":  [
+                               "FAILED",
+                               "FAILED",
+                               "FAILED",
+                               "FAILED",
+                               "FAILED",
+                               "FAILED",
+                               "FAILED",
+                               "FAILED",
+                               "FAILED",
+                               "FAILED"
+                           ],
+        "avg_latency_sec":  0.9535,
+        "min_latency_sec":  0.9384,
+        "max_latency_sec":  1.0117,
+        "no_fallback_count":  0,
+        "call_not_permitted_count":  31,
+        "unavailable_log_count":  36
+    },
+    {
+        "feign_cb":  "false",
+        "run":  2,
+        "warmup_requests_to_open":  2,
+        "cb_state_at_measurement_start":  "CIRCUIT_OPEN",
+        "all_cb_states_at_open":  {
+                                      "inventoryService":  "CIRCUIT_OPEN"
+                                  },
+        "all_cb_states_after":  {
+                                    "inventoryService":  "CIRCUIT_OPEN"
+                                },
+        "skipped_half_open_attempts":  0,
+        "requests_measured":  10,
+        "open_state_latencies_sec":  [
+                                         0.932,
+                                         0.9512,
+                                         0.9367,
+                                         0.9552,
+                                         0.9287,
+                                         0.9442,
+                                         0.9302,
+                                         0.9314,
+                                         0.9337,
+                                         0.9519
+                                     ],
+        "order_statuses":  [
+                               "FAILED",
+                               "FAILED",
+                               "FAILED",
+                               "FAILED",
+                               "FAILED",
+                               "FAILED",
+                               "FAILED",
+                               "FAILED",
+                               "FAILED",
+                               "FAILED"
+                           ],
+        "avg_latency_sec":  0.9395,
+        "min_latency_sec":  0.9287,
+        "max_latency_sec":  0.9552,
+        "no_fallback_count":  0,
+        "call_not_permitted_count":  31,
+        "unavailable_log_count":  36
+    },
+    {
+        "feign_cb":  "false",
+        "run":  3,
+        "warmup_requests_to_open":  2,
+        "cb_state_at_measurement_start":  "CIRCUIT_OPEN",
+        "all_cb_states_at_open":  {
+                                      "inventoryService":  "CIRCUIT_OPEN"
+                                  },
+        "all_cb_states_after":  {
+                                    "inventoryService":  "CIRCUIT_OPEN"
+                                },
+        "skipped_half_open_attempts":  0,
+        "requests_measured":  10,
+        "open_state_latencies_sec":  [
+                                         0.9407,
+                                         0.9388,
+                                         0.9539,
+                                         0.9573,
+                                         0.9382,
+                                         0.9717,
+                                         0.9469,
+                                         0.9639,
+                                         0.9551,
+                                         0.9694
+                                     ],
+        "order_statuses":  [
+                               "FAILED",
+                               "FAILED",
+                               "FAILED",
+                               "FAILED",
+                               "FAILED",
+                               "FAILED",
+                               "FAILED",
+                               "FAILED",
+                               "FAILED",
+                               "FAILED"
+                           ],
+        "avg_latency_sec":  0.9536,
+        "min_latency_sec":  0.9382,
+        "max_latency_sec":  0.9717,
+        "no_fallback_count":  0,
+        "call_not_permitted_count":  31,
+        "unavailable_log_count":  36
+    }
+]

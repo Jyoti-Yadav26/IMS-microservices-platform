@@ -1,0 +1,230 @@
+﻿[
+    {
+        "feign_cb":  "true",
+        "run":  1,
+        "warmup_requests_to_open":  24,
+        "cb_states_at_open":  {
+                                  "inventoryService":  "CIRCUIT_OPEN"
+                              },
+        "cb_states_after_test":  {
+                                     "inventoryService":  "CIRCUIT_HALF_OPEN"
+                                 },
+        "open_state_latencies_sec":  [
+                                         0.9854,
+                                         0.9684,
+                                         0.9869,
+                                         0.9579,
+                                         0.9643,
+                                         0.9949,
+                                         0.9747,
+                                         0.9736,
+                                         0.9977,
+                                         2.0327
+                                     ],
+        "http_statuses":  [
+                              201,
+                              201,
+                              201,
+                              201,
+                              201,
+                              201,
+                              201,
+                              201,
+                              201,
+                              201
+                          ],
+        "avg_latency_sec":  1.0837,
+        "min_latency_sec":  0.9579,
+        "max_latency_sec":  2.0327
+    },
+    {
+        "feign_cb":  "true",
+        "run":  2,
+        "warmup_requests_to_open":  23,
+        "cb_states_at_open":  {
+                                  "inventoryService":  "CIRCUIT_OPEN"
+                              },
+        "cb_states_after_test":  {
+                                     "inventoryService":  "CIRCUIT_OPEN"
+                                 },
+        "open_state_latencies_sec":  [
+                                         0.9979,
+                                         0.9902,
+                                         0.9763,
+                                         0.9888,
+                                         0.9678,
+                                         0.9681,
+                                         0.9681,
+                                         0.9763,
+                                         0.9799,
+                                         0.9691
+                                     ],
+        "http_statuses":  [
+                              201,
+                              201,
+                              201,
+                              201,
+                              201,
+                              201,
+                              201,
+                              201,
+                              201,
+                              201
+                          ],
+        "avg_latency_sec":  0.9782,
+        "min_latency_sec":  0.9678,
+        "max_latency_sec":  0.9979
+    },
+    {
+        "feign_cb":  "true",
+        "run":  3,
+        "warmup_requests_to_open":  2,
+        "cb_states_at_open":  {
+                                  "inventoryService":  "CIRCUIT_OPEN"
+                              },
+        "cb_states_after_test":  {
+                                     "inventoryService":  "CIRCUIT_OPEN"
+                                 },
+        "open_state_latencies_sec":  [
+                                         0.9855,
+                                         1.0602,
+                                         1.0341,
+                                         0.9809,
+                                         0.9946,
+                                         0.9834,
+                                         0.9508,
+                                         0.9596,
+                                         0.9722,
+                                         0.9482
+                                     ],
+        "http_statuses":  [
+                              201,
+                              201,
+                              201,
+                              201,
+                              201,
+                              201,
+                              201,
+                              201,
+                              201,
+                              201
+                          ],
+        "avg_latency_sec":  0.9869,
+        "min_latency_sec":  0.9482,
+        "max_latency_sec":  1.0602
+    },
+    {
+        "feign_cb":  "false",
+        "run":  1,
+        "warmup_requests_to_open":  2,
+        "cb_states_at_open":  {
+                                  "inventoryService":  "CIRCUIT_OPEN"
+                              },
+        "cb_states_after_test":  {
+                                     "inventoryService":  "CIRCUIT_OPEN"
+                                 },
+        "open_state_latencies_sec":  [
+                                         0.956,
+                                         0.9896,
+                                         0.9748,
+                                         1.0158,
+                                         1.0039,
+                                         1.2689,
+                                         0.954,
+                                         0.9625,
+                                         0.9619,
+                                         0.9988
+                                     ],
+        "http_statuses":  [
+                              201,
+                              201,
+                              201,
+                              201,
+                              201,
+                              201,
+                              201,
+                              201,
+                              201,
+                              201
+                          ],
+        "avg_latency_sec":  1.0086,
+        "min_latency_sec":  0.954,
+        "max_latency_sec":  1.2689
+    },
+    {
+        "feign_cb":  "false",
+        "run":  2,
+        "warmup_requests_to_open":  2,
+        "cb_states_at_open":  {
+                                  "inventoryService":  "CIRCUIT_OPEN"
+                              },
+        "cb_states_after_test":  {
+                                     "inventoryService":  "CIRCUIT_OPEN"
+                                 },
+        "open_state_latencies_sec":  [
+                                         0.9479,
+                                         0.9603,
+                                         0.9766,
+                                         0.9544,
+                                         0.9482,
+                                         0.9472,
+                                         0.9832,
+                                         0.9859,
+                                         0.9785,
+                                         0.9662
+                                     ],
+        "http_statuses":  [
+                              201,
+                              201,
+                              201,
+                              201,
+                              201,
+                              201,
+                              201,
+                              201,
+                              201,
+                              201
+                          ],
+        "avg_latency_sec":  0.9648,
+        "min_latency_sec":  0.9472,
+        "max_latency_sec":  0.9859
+    },
+    {
+        "feign_cb":  "false",
+        "run":  3,
+        "warmup_requests_to_open":  8,
+        "cb_states_at_open":  {
+                                  "inventoryService":  "CIRCUIT_OPEN"
+                              },
+        "cb_states_after_test":  {
+                                     "inventoryService":  "CIRCUIT_OPEN"
+                                 },
+        "open_state_latencies_sec":  [
+                                         0.9433,
+                                         0.9434,
+                                         0.945,
+                                         0.9511,
+                                         0.9797,
+                                         0.9792,
+                                         0.9509,
+                                         0.9435,
+                                         0.9477,
+                                         0.9346
+                                     ],
+        "http_statuses":  [
+                              201,
+                              201,
+                              201,
+                              201,
+                              201,
+                              201,
+                              201,
+                              201,
+                              201,
+                              201
+                          ],
+        "avg_latency_sec":  0.9518,
+        "min_latency_sec":  0.9346,
+        "max_latency_sec":  0.9797
+    }
+]

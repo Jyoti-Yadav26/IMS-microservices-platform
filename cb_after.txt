@@ -1,0 +1,18 @@
+﻿NOTE: this assumes the product/sku already exists or inventory-service
+was up when it was created ù if inventory-service is down, product
+creation itself will fail. Create the product BEFORE stopping the service.
+Request 1: status=500 elapsed=0.184s body={'timestamp': '2026-07-18T15:32:37.570+00:00', 'path': '/api/orders', 'status': 500, 'error': 'Internal Server Error', 'requestId': '71a45ec6-111'}
+Request 2: status=500 elapsed=0.095s body={'timestamp': '2026-07-18T15:32:37.911+00:00', 'path': '/api/orders', 'status': 500, 'error': 'Internal Server Error', 'requestId': '14023495-112'}
+Request 3: status=500 elapsed=0.070s body={'timestamp': '2026-07-18T15:32:38.186+00:00', 'path': '/api/orders', 'status': 500, 'error': 'Internal Server Error', 'requestId': 'e95ac37b-113'}
+Request 4: status=500 elapsed=0.083s body={'timestamp': '2026-07-18T15:32:38.461+00:00', 'path': '/api/orders', 'status': 500, 'error': 'Internal Server Error', 'requestId': 'b1843ff6-114'}
+Request 5: status=500 elapsed=0.170s body={'timestamp': '2026-07-18T15:32:38.780+00:00', 'path': '/api/orders', 'status': 500, 'error': 'Internal Server Error', 'requestId': '0e03dfd7-115'}
+Request 6: status=500 elapsed=0.196s body={'timestamp': '2026-07-18T15:32:39.243+00:00', 'path': '/api/orders', 'status': 500, 'error': 'Internal Server Error', 'requestId': '3d3e282b-116'}
+Request 7: status=500 elapsed=0.172s body={'timestamp': '2026-07-18T15:32:39.614+00:00', 'path': '/api/orders', 'status': 500, 'error': 'Internal Server Error', 'requestId': '7b9f50f4-117'}
+Request 8: status=500 elapsed=0.098s body={'timestamp': '2026-07-18T15:32:39.916+00:00', 'path': '/api/orders', 'status': 500, 'error': 'Internal Server Error', 'requestId': '3a24aab3-118'}
+Request 9: status=500 elapsed=0.100s body={'timestamp': '2026-07-18T15:32:40.223+00:00', 'path': '/api/orders', 'status': 500, 'error': 'Internal Server Error', 'requestId': '81a38b19-119'}
+Request 10: status=500 elapsed=0.069s body={'timestamp': '2026-07-18T15:32:40.502+00:00', 'path': '/api/orders', 'status': 500, 'error': 'Internal Server Error', 'requestId': '0da0c195-120'}
+Request 11: status=500 elapsed=0.055s body={'timestamp': '2026-07-18T15:32:40.760+00:00', 'path': '/api/orders', 'status': 500, 'error': 'Internal Server Error', 'requestId': '890cd37d-121'}
+Request 12: status=500 elapsed=0.063s body={'timestamp': '2026-07-18T15:32:41.016+00:00', 'path': '/api/orders', 'status': 500, 'error': 'Internal Server Error', 'requestId': '2bc1ae7b-122'}
+Request 13: status=500 elapsed=0.076s body={'timestamp': '2026-07-18T15:32:41.283+00:00', 'path': '/api/orders', 'status': 500, 'error': 'Internal Server Error', 'requestId': 'b7b9e792-123'}
+Request 14: status=500 elapsed=0.111s body={'timestamp': '2026-07-18T15:32:41.601+00:00', 'path': '/api/orders', 'status': 500, 'error': 'Internal Server Error', 'requestId': 'c456e2bc-124'}
+Request 15: status=500 elapsed=0.062s body={'timestamp': '2026-07-18T15:32:41.870+00:00', 'path': '/api/orders', 'status': 500, 'error': 'Internal Server Error', 'requestId': 'b486c535-125'}
