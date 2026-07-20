@@ -1,6 +1,6 @@
 # IMS - Inventory Management System
 
-A small but realistic *microservices* Inventory Management System built in Java 17 / Spring Boot 3. It demonstrates the core building blocks of resilient service-to-service communication: service discovery, an API gateway, synchronous calls guarded by circuit-breaker/retry/timeout, asynchronous event-driven communication via Kafka, idempotency, optimistic locking, and a manual saga with compensation.
+A small but realistic **microservices** Inventory Management System built in Java 17 / Spring Boot 3. It demonstrates the core building blocks of resilient service-to-service communication: service discovery, an API gateway, synchronous calls guarded by circuit-breaker/retry/timeout, asynchronous event-driven communication via Kafka, idempotency, optimistic locking, and a manual saga with compensation.
 
 ## Contents
 
