@@ -12,11 +12,11 @@ idempotency, optimistic locking, and a manual saga with compensation.
 - [Architecture](#architecture)
 - [Services](#services)
 - [Design & resilience concepts demonstrated](#design--resilience-concepts-demonstrated)
+- [Bugs found and fixed through load testing](#bugs-found-and-fixed-through-load-testing)
 - [Running it](#running-it)
 - [API walkthrough](#api-walkthrough)
 - [Testing](#testing)
 - [Project layout](#project-layout)
-- [Known simplifications / what I'd add for production](#Bugs found and fixed through load testing)
 
 ## Architecture
 
