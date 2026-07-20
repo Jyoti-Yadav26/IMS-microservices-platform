@@ -16,7 +16,7 @@ idempotency, optimistic locking, and a manual saga with compensation.
 - [API walkthrough](#api-walkthrough)
 - [Testing](#testing)
 - [Project layout](#project-layout)
-- [Known simplifications / what I'd add for production](#known-simplifications--what-id-add-for-production)
+- [Known simplifications / what I'd add for production](#Bugs found and fixed through load testing)
 
 ## Architecture
 
