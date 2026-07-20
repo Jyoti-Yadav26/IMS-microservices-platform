@@ -157,6 +157,44 @@ order-service uses to talk to inventory-service (`client/dto/*`) are deliberatel
 hand-duplicated rather than shared via a common library, trading a bit of manual
 synchronization for true independent deployability of the two services.
 
+## Bugs found and fixed through load testing
+
+This system was stress-tested under concurrency and failure conditions, not just
+demoed happy-path. Two real issues surfaced during testing, and both were fixed and
+re-verified with controlled experiments rather than assumed fixed:
+
+**1. Idempotency race condition (`inventory-service`)**
+Firing 10 concurrent requests with the same idempotency key revealed that all 10
+could pass the "does this key already exist?" check before any of them had
+committed — a classic check-then-act race. One request won and inserted
+successfully; the other 9 hit an unhandled database unique-constraint violation
+(Postgres `23505`) and returned a raw `500` instead of a clean replayed result.
+
+Fixed by catching the constraint violation specifically, re-querying the
+reservation table, and returning the winning request's result — with a short
+bounded retry to cover the edge case where the winner's transaction hasn't
+committed yet. Verified with 3 separate concurrent load test runs (10 simultaneous
+duplicate requests each): 30/30 requests returned clean `200`s, stock decremented
+correctly every time.
+
+**2. Circuit breaker fallback bug (`order-service`)**
+With `inventory-service` stopped, the circuit breaker correctly tripped `OPEN`
+(confirmed via `actuator/health` state transitions), but requests were still
+taking ~940ms each — not the near-instant fail expected once a breaker is open.
+Root cause: the fallback method was catching the breaker's rejection and
+re-throwing it as a different exception type, which the retry logic didn't
+recognize as "already handled" — so it retried anyway, paying the full backoff
+delay for no reason.
+
+An initial hypothesis (a second, competing circuit breaker from Spring Cloud
+OpenFeign layered on top of Resilience4j's) was tested and ruled out — both
+configurations gave statistically indistinguishable latency (~940ms either way).
+The actual fix was adding the fallback's exception type to retry's
+`ignore-exceptions`. Verified via controlled experiments (3 runs × 10 requests,
+circuit-open state confirmed via actuator before each run): latency dropped from
+~940ms to ~40–80ms, with zero overlap between any before/after measurement.
+
+
 ## Running it
 
 ### Option A: Docker Compose (everything, one command)
@@ -264,24 +302,3 @@ IMS/
     └── src/main/java/com/ims/notification/{controller,service,repository,entity,dto,listener,event,config}
 ```
 
-## Known simplifications / what I'd add for production
-
-Being upfront about scope is itself part of showing good engineering judgment:
-
-- **No auth** - a real system would put OAuth2/JWT validation at the gateway plus
-  service-to-service auth (mTLS or signed tokens); skipped here to keep the focus on
-  service communication patterns.
-- **No distributed tracing** - in production I'd add Micrometer Tracing +
-  Zipkin/Jaeger so a request spanning gateway → order-service → inventory-service → Kafka
-  → notification-service is visible as one trace, especially useful for debugging the
-  saga/compensation path.
-- **Compensation is best-effort** - if the compensating `restock` call itself fails
-  (inventory-service down *and* it was down for the original reservation too - unlikely
-  but possible), we log loudly rather than retry indefinitely. A production system would
-  push that compensation onto a durable outbox/retry queue instead.
-- **No API versioning strategy** - fine for a single-consumer demo; a real public API
-  would need a plan for evolving `/api/inventory/v1` etc.
-- **Single broker/single replica everywhere** - `docker-compose.yml` runs one Kafka broker
-  and one instance of each service; the *code* (stateless services, idempotent operations,
-  externalized config, service discovery) is what actually enables horizontal scaling, not
-  the demo's instance count.
