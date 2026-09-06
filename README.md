@@ -203,6 +203,8 @@ someone writes them down on purpose.
   either way). Fix: add the fallback's exception type to retry's
   `ignore-exceptions`. Verified: latency dropped to ~40–80ms, no overlap with
   pre-fix measurements.
+
+  
 **Deliberate trade-offs**
  
 - *Duplicated DTOs instead of a shared library between order-service and
@@ -219,6 +221,8 @@ someone writes them down on purpose.
   API design here, but it pushes an obligation onto every client to check
   `status` — easy to forget. Worth adding a webhook/callback option so
   clients aren't required to poll or inspect the body.
+  
+  
 **What I'd change with more time**
  
 - **Single point of failure at the gateway.** Right now there's one
