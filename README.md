@@ -1,6 +1,3 @@
-
-
-Readme · MD
 # IMS — Inventory Management System
  
 A small microservices system (Java 17, Spring Boot 3) that places orders against
