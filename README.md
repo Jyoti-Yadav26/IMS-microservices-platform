@@ -184,8 +184,6 @@ mvn test
  
 ## Decisions made, and what I'd change
  
-Every project has trade-offs that don't survive contact with the README unless
-someone writes them down on purpose.
  
 **Bugs found under load, not assumed away**
  
