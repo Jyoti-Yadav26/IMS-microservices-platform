@@ -181,10 +181,6 @@ mvn test
 - Check `actuator/health` on the relevant service for live circuit-breaker state
 - The `docs/` in each service's package structure (`controller/service/repository/...`)
   maps 1:1 to responsibility, so start in the package matching the symptom
-## Who maintains it
- 
-Maintained by the repo owner as a personal/portfolio project. No SLA — issues
-and PRs are welcome but reviewed on a best-effort basis.
  
 ## Decisions made, and what I'd change
  
